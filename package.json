@@ -1,0 +1,53 @@
+{
+  "name": "kvikk-shopify-app",
+  "version": "1.0.0",
+  "description": "Kvikk Shipping Integration for Shopify",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "shopify app dev",
+    "build": "shopify app build",
+    "deploy": "shopify app deploy",
+    "generate": "shopify app generate",
+    "start": "node backend/server.js",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^8.1.1",
+    "@shopify/shopify-app-express": "^2.1.0",
+    "@shopify/polaris": "^12.0.0",
+    "@shopify/polaris-icons": "^7.10.0",
+    "@remix-run/node": "^2.0.0",
+    "@remix-run/react": "^2.0.0",
+    "@remix-run/serve": "^2.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "node-cron": "^3.0.2",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.50.0",
+    "@types/node": "^20.8.0",
+    "eslint": "^8.50.0",
+    "eslint-config-shopify": "^8.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "shopify",
+    "app",
+    "kvikk",
+    "shipping",
+    "logistics",
+    "e-commerce"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

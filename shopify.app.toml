@@ -1,0 +1,36 @@
+# shopify.app.toml - Fő konfiguráció
+
+name = "Kvikk Shipping Integration"
+client_id = "your_app_client_id"
+application_url = "https://your-app-domain.com"
+
+[access_scopes]
+# Szükséges engedélyek
+scopes = [
+  "read_orders",
+  "write_orders", 
+  "read_products",
+  "write_shipping",
+  "read_locations",
+  "write_fulfillments"
+]
+
+[auth]
+redirect_urls = [
+  "https://your-app-domain.com/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[[webhooks.subscriptions]]
+topics = ["orders/create", "orders/updated", "orders/fulfilled"]
+uri = "https://your-app-domain.com/webhooks/orders"
+
+# Carrier Service konfiguráció
+[pos]
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "https://your-dev-store.myshopify.com"
